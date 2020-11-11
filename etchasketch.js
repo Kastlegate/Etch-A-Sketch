@@ -2,6 +2,7 @@
 
 //variables for the script
 const grid = document.getElementById("sketchContainer");
+const resetButton = document.getElementById("resetButton");
 let gridSize = 16;
 
 
@@ -28,6 +29,12 @@ function createTheGrid(sizeForGrid)
 
 }
 
+function reset()
+{
+    grid.textContent = "";
+    createTheGrid(gridSize);    
+}
 
+resetButton.addEventListener("click", reset)
 
 createTheGrid(gridSize);
