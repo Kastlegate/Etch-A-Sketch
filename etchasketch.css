@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     margin: auto;
-    /*min-width: 100%;*/
+    width: 100%;
 }
 
 #etchASketchImage{
@@ -36,15 +36,34 @@
 }
 
 .resetButton{
+    
+    display:block;
+    margin: 0 auto;
     cursor:pointer;
     background: transparent;
     border: none !important;
     outline: none !important;
-    font-size:0;
     height: 90px;
     width: 70px;
-    left: 33px !important;
-    position: relative;
+    right:250px !important;
+    position: relative !important;
     top: -390px;
+    z-index: 2;
+}
+
+
+.invisibleGridButton{
+    
+    display:block;
+    margin: 0 auto;
+    cursor:pointer;
+    background: transparent;
+    border: none !important;
+    outline: none !important;
+    height: 90px;
+    width: 70px;
+    left:250px !important;
+    position: relative !important;
+    top: -490px;
     z-index: 2;
 }
