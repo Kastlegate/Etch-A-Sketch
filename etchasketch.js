@@ -4,7 +4,8 @@
 const grid = document.getElementById("sketchContainer");
 const resetButton = document.getElementById("resetButton");
 const invisibleGridButton = document.getElementById("invisibleGridButton");
-let gridSize = 16;
+const userGridInputButton = document.getElementById("userGridInput");
+let gridSize = 25;
 let gridToggle = false;
 
 
@@ -66,9 +67,28 @@ function invisibleGrid()
     }
 }
 
+// Function to get the user' input for the grid size
+function getUserInput()
+{
+    var newGridSize =  window.prompt("Please enter the size for the new grid. There is a minimum of 1 and a maximum of 100");
+    
+    //while loop for validation check
+    while (isNaN(newGridSize) || newGridSize < 1 || newGridSize > 100)
+    {
+        newGridSize =  window.prompt("Sorry, that wan't a valid entry. Please enter a number between 1 and 100");
+    }
+    
+    gridSize = newGridSize;
+    grid.textContent = "";
+    createTheGrid(gridSize); 
+}
+
+
+
 //adds listeners to each button and the functions that enact on the event
 resetButton.addEventListener("click", reset)
 invisibleGridButton.addEventListener("click", invisibleGrid)
+userGridInputButton.addEventListener("click", getUserInput)
 
 //calls the create the initial grid with the default gridSize
 createTheGrid(gridSize);

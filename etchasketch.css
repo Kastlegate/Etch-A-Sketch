@@ -1,9 +1,56 @@
+body{
+    display: flex;
+}
+
+#guide{
+    display: flex;
+    flex-direction: column;
+}
+
+#guide1{
+    padding: 10px;
+    max-height: fit-content;
+    height: -moz-max-content;
+    background-color: rgb(100, 182, 237);
+    height: fit-content !important;
+    width: 250px;
+    margin-top: 40px !important;
+    border: 1px solid gray;
+    box-shadow: 5px 10px;
+}
+
+#guide2{
+    padding: 10px;
+    max-height: fit-content;
+    height: -moz-max-content;
+    background-color: rgb(100, 182, 237);
+    height: fit-content !important;
+    width: 250px;
+    margin-top: 20px !important;
+    border: 1px solid gray;
+    box-shadow: 5px 10px;
+}
+
+#guide3{
+    padding: 10px;
+    max-height: fit-content;
+    height: -moz-max-content;
+    background-color: rgb(100, 182, 237);
+    height: fit-content !important;
+    width: 250px;
+    margin-top: 20px !important;
+    border: 1px solid gray;
+    box-shadow: 5px 10px;
+}
+
+
 .container{
     width: fit-content;
     display: flex;
     flex-direction: column;
     margin: auto;
     width: 100%;
+    
 }
 
 #etchASketchImage{
@@ -28,6 +75,12 @@
     top: -422px;
     left: 3px;
     z-index: 2;
+}
+
+.userGridInput{  
+    display: block;  
+    width: fit-content;
+    margin: auto !important;
 }
 
 .divForGrid{
